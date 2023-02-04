@@ -70,7 +70,7 @@ export const selectCONTACT = () => {
 
 export const getAllPlayers = () => {
     return async function (dispatch) {
-        let allPlayers = await axios.get('http://localhost:3001/player')
+        let allPlayers = await axios.get('/player')
         const respuesta = allPlayers.data
         dispatch({ type: GETALLPLAYERS, payload: respuesta })
     }
@@ -78,7 +78,7 @@ export const getAllPlayers = () => {
 
 export const getPlayerDetail = (id) => {
     return async function (dispatch) {
-        let player = await axios.get(`http://localhost:3001/player/${id}`)
+        let player = await axios.get(`/player/${id}`)
         const respuesta = player.data
         dispatch({ type: PLAYERDETAIL, payload: respuesta })
     }
@@ -86,7 +86,7 @@ export const getPlayerDetail = (id) => {
 
 export const deletePlayer = (id) => {
     return async function (dispatch) {
-        let info = axios.delete(`http://localhost:3001/player/delete/${id}`)
+        let info = axios.delete(`/player/delete/${id}`)
         dispatch({ type: DELETE_PLAYER, payload: info.data })
     }
 }
@@ -95,7 +95,7 @@ export const deletePlayer = (id) => {
 
 export const getAllTeams = () => {
     return async function (dispatch) {
-        let allTeams = await axios.get('http://localhost:3001/team')
+        let allTeams = await axios.get('/team')
         const respuesta = allTeams.data
         dispatch({ type: GETALLTEAMS, payload: respuesta })
     }
@@ -103,7 +103,7 @@ export const getAllTeams = () => {
 
 export const getTeamDetail = (id) => {
     return async function (dispatch) {
-        let team = await axios.get(`http://localhost:3001/team/${id}`)
+        let team = await axios.get(`/team/${id}`)
         const respuesta = team.data
         dispatch({ type: TEAMDETAIL, payload: respuesta })
     }
@@ -111,7 +111,7 @@ export const getTeamDetail = (id) => {
 
 export const deleteTeam = (id) => {
     return async function (dispatch) {
-        let info = axios.delete(`http://localhost:3001/team/delete/${id}`)
+        let info = axios.delete(`/team/delete/${id}`)
         dispatch({ type: DELETE_TEAM, payload: info.data })
     }
 }
@@ -120,7 +120,7 @@ export const deleteTeam = (id) => {
 
 export const getAllTournaments = () => {
     return async function (dispatch) {
-        let allTournaments = await axios.get('http://localhost:3001/tournament')
+        let allTournaments = await axios.get('/tournament')
         const respuesta = allTournaments.data
         dispatch({ type: GETALLTOURNAMENTS, payload: respuesta })
     }
@@ -128,7 +128,7 @@ export const getAllTournaments = () => {
 
 export const getTournamentDetail = (id) => {
     return async function (dispatch) {
-        let tournament = await axios.get(`http://localhost:3001/tournament/${id}`)
+        let tournament = await axios.get(`/tournament/${id}`)
         const respuesta = tournament.data
         dispatch({ type: TOURNAMENTDETAIL, payload: respuesta })
     }
@@ -136,7 +136,7 @@ export const getTournamentDetail = (id) => {
 
 export const deleteTournament= (id) => {
     return async function (dispatch) {
-        let info = axios.delete(`http://localhost:3001/tournament/delete/${id}`)
+        let info = axios.delete(`/tournament/delete/${id}`)
         dispatch({ type: DELETE_TOURNAMENT, payload: info.data })
     }
 }
@@ -146,7 +146,7 @@ export const deleteTournament= (id) => {
 
 export const getAllGames = () => {
     return async function (dispatch) {
-        let allTournaments = await axios.get('http://localhost:3001/game')
+        let allTournaments = await axios.get('/game')
         const respuesta = allTournaments.data
         dispatch({ type: GETALLGAMES, payload: respuesta })
     }
@@ -154,7 +154,7 @@ export const getAllGames = () => {
 
 export const deleteGame = (id) => {
     return async function (dispatch) {
-        let info = axios.delete(`http://localhost:3001/team/game/${id}`)
+        let info = axios.delete(`/team/game/${id}`)
         dispatch({ type: DELETE_GAME, payload: info.data })
     }
 }
