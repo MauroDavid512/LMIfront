@@ -453,7 +453,74 @@ background: linear-gradient(225deg, #ffcd53, #e4ad46);
   border-radius: 15px;
 }
 
+.contact{
+  display:flex;
+  width: 42rem;
+  justify-content: space-around;
+  margin: 15px;
+}
+
+.ticket{
+  background-color: rgb(255, 255, 255);
+  box-shadow: inset 6px 6px 12px #d9d9d9,
+  inset -6px -6px 12px #d9d9d9;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  width: 15rem;
+  height: 4rem;
+  font-family: Impact;
+  font-size: 25px;
+  transition: .5s;
+  cursor: pointer;
+
+}
+
+.ticket:hover{
+  background-color: orange;
+  box-shadow: inset 6px 6px 12px #d9d9d900,
+  inset -6px -6px 12px #ffffff00;
+  font-size: 27px;
+  -webkit-text-fill-color: rgb(255, 255, 255);
+  -webkit-text-stroke: 0.5px black;
+
+  transition: .5s;
+}
+
+
+
 .vermas{
   cursor: pointer;
   color: rgb(3, 3, 117);
+}
+
+
+.loader{
+  width: 20rem;
+  animation: loader 1.5s linear infinite;
+}
+
+@keyframes loader {
+  0%{}
+  20%{
+    transform: rotate(-27deg);
+  }
+  25%{
+    transform: rotate(-30deg);
+  }
+  30%{
+    transform: rotate(-27deg);
+  }
+  50%{}
+  70%{
+    transform: rotate(27deg);
+  }
+  75%{
+    transform: rotate(30deg);
+  }
+  80%{
+    transform: rotate(27deg);
+  }
 }

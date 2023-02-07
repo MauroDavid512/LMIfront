@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import TeamCard from "./TeamCard";
 import CreateTeam from "./CreateTeam";
 import * as actions from '../../redux/actions'
+import equilibrista from '../../imgs/equilibrista.png'
 
 const Teams = () => {
 
@@ -30,6 +31,12 @@ const Teams = () => {
             {create ? <CreateTeam/>:false}
             <div class="center">
             <div class="teamContainer">
+                
+            {team.length == 0 ? 
+            <div class="center">
+            <img class="loader" src={equilibrista} alt="" /><hr />
+            </div>
+            : false }
             {team? team.map(e => <TeamCard name={e.name} image={e.image} id={e.id}/>):false}
             </div>
             </div>

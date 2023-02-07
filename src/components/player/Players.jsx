@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import PlayerCard from "./PlayerCard";
 import * as actions from "../../redux/actions"
 import CreatePlayer from "./CreatePlayer";
+import equilibrista from "../../imgs/equilibrista.png"
 
 
 const Players = () => {
@@ -30,6 +31,9 @@ const Players = () => {
             {create && admin? <div class="center"><CreatePlayer/></div>:false}
             <div class="center">
             <div class="playerContainer">
+                {players.length == 0 ? 
+                <img class="loader" src={equilibrista} alt="" /> 
+                : false }
             {players?players.map(e => <PlayerCard name={e.name} image={e.image} id={e.id} />):false}
             </div>
             </div>

@@ -14,9 +14,7 @@ const Nav = () => {
         players() {dispatch(actions.selectPLAYERS())},
         teams() {dispatch(actions.selectTEAMS())},
         tournaments() {dispatch(actions.selectTOURNAMENTS())},
-        games() {dispatch(actions.selectGAMES())},
-        ticket() {dispatch(actions.selectTICKET())},
-        contact() {dispatch(actions.selectCONTACT())}
+        games() {dispatch(actions.selectGAMES())}
     }
 
 
@@ -39,9 +37,6 @@ const Nav = () => {
                 <div class="navoption" onClick={methods.teams}>Equipos</div>
                 <div class="navoption" onClick={methods.tournaments}>Torneos</div>
                 <div class="navoption" onClick={methods.games}>Juegos</div>
-                <div class="navoption" onClick={methods.ticket}>¡Comprar entradas!</div>
-                <div class="navoption" onClick={methods.contact}>Contrataciones</div>
-                
             
             </Link>
             </div>
